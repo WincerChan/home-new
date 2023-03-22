@@ -1,4 +1,10 @@
 ---
+import Home from "../components/Home";
+
+import { loadAllSvgs, loadConfig, adjustColor } from "../compile_utils.js";
+
+const config = loadConfig();
+const svgs = loadAllSvgs();
 ---
 
 <html lang="en">
@@ -7,9 +13,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="referrer" content="same-origin" />
+		<title>Wincer</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-bgc-dark font-round">
+		<Home client:visible config={config} svgAsset={svgs} />
 	</body>
 </html>
