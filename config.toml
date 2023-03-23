@@ -36,3 +36,9 @@ name = "Meme-Generator"
 url = "https://github.com/WincerChan/Meme-Generator"
 cover = "https://images.unsplash.com/photo-1679471491129-9e2f3ea6ec3f"
 desc = "Meme Generator for pure javascript"
+
+[[Portfolio]]
+name = "Mirror"
+url = "https://github.com/WincerChan/Mirror"
+cover = "https://images.unsplash.com/photo-1679471491129-9e2f3ea6ec3f"
+desc = "Golang reverse proxy tool"

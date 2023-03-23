@@ -12,6 +12,9 @@ module.exports = {
 				},
 				"bgs": {
 					"dark": "#B8BFC3"
+				},
+				"heading": {
+					"dark": "#fffef8"
 				}
 			},
 			"fontFamily": {
