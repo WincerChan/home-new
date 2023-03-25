@@ -39,7 +39,6 @@ const Portfolio = (props) => {
     let oneDistant;
     const [activeIndex, setActiveIndex] = createSignal(0);
     const [showAnimate, setShowAnimate] = createSignal(true);
-    const [offset, setOffset] = createSignal(0)
     const [timer, setTimer] = createSignal(null);
     const updateActiveIndex = () => {
         oneDistant = portfolioElement.childNodes[1].getBoundingClientRect().x - portfolioElement.childNodes[0].getBoundingClientRect().x;
@@ -70,6 +69,7 @@ const Portfolio = (props) => {
 
     onCleanup(() => {
         setActiveIndex(0);
+        setShowAnimate(true)
         stopTimer();
     });
 
@@ -89,7 +89,7 @@ const Portfolio = (props) => {
                     <For each={projects.concat(projects.slice(0, 2))} >
                         {(item, i) => {
                             return (
-                                <div className={`${(i() % projects.length) === (activeIndex() % projects.length) ? '' : 'non-activate'} h-56 overflow-hidden w-[calc(100vw-3rem)] sm:w-[23rem] bg-[#fffefa] bg-opacity-50 rounded-3xl leading-relaxed transition-all duration-500`}
+                                <a href={item.url} target="_blank" className={`${(i() % projects.length) === (activeIndex() % projects.length) ? '' : 'non-activate'} h-56 overflow-hidden w-[calc(100vw-3rem)] sm:w-[23rem] bg-[#fffefa] bg-opacity-50 rounded-3xl leading-relaxed transition-all duration-500`}
                                 >
                                     <div className="h-28 bg-cover bg-center"
                                         style={`background-image: url('${item.cover}'); `}
@@ -99,7 +99,7 @@ const Portfolio = (props) => {
                                         <h3 className="text-lg text-heading-dark">{item.name}</h3>
                                         <p className="text-sm text-[#503e2a]">{item.desc}</p>
                                     </div>
-                                </div>
+                                </a>
                             )
                         }}
                     </For>
@@ -121,7 +121,7 @@ const Portfolio = (props) => {
 const Footer = () => {
     return (
         <footer className="text-center py-6">
-            <span className="text-sm text-footer-dark">©2017 - 2023 <span className=" font-sans text-[#ff3860]">♥</span> Made by Wincer.</span>
+            <span className="text-sm text-footer-dark">©2017 - {new Date().getFullYear()} <span className=" font-sans text-[#ff3860]">♥</span> Made by Wincer.</span>
         </footer>
     )
 }
