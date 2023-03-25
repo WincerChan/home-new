@@ -11,10 +11,10 @@ function UserProfile(props) {
         </div>
         <img className='h-24 w-24 rounded-full' src={config.avatar} alt="" />
       </div>
-      <a href={`mailto:${config.email}`} className='mx-auto mt-24 2xl:mt-32 flex w-fit  border-[#1A94BC] rounded-full p-4 bg-[#4cc6ee19]'>
+      <div href={`mailto:${config.email}`} className='mx-auto mt-24 2xl:mt-32 flex w-fit  border-[#1A94BC] rounded-full p-4 bg-[#4cc6ee19]'>
         <img src={svg['mail']} class='mr-4' />
         <p className='text-title-dark' innerHTML={obfsEmail}></p>
-      </a>
+      </div>
     </div >
   );
 }
