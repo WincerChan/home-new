@@ -9,7 +9,7 @@ export function adjustColor(color, amount) {
     ((clamp(r) << 16) | (clamp(g) << 8) | clamp(b))
       .toString(16)
       .padStart(6, '0')
-  ) + '19';
+  ) + '33';
 }
 
 function clamp(value, min = 0, max = 255) {

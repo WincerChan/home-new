@@ -7,6 +7,12 @@ base = "Wincer"
 note = "/ˈwɪnsə(r)/"
 
 [[links]]
+name = "blog"
+url = "https://blog.itswincer.com"
+color = "#FF9A00"
+title = "Wincer's Blog" 
+
+[[links]]
 name = "github"
 url = "https://github.com/WincerChan"
 color = "#24292F"
@@ -17,12 +23,6 @@ name = "telegram"
 url ="https://t.me/Tivsae"
 title = '@Tivsae'
 color = "#22A6DC"
-
-[[links]]
-name = "blog"
-url = "https://blog.itswincer.com"
-color = "#FF9A00"
-title = "Wincer's Blog" 
 
 
 [[Portfolio]]

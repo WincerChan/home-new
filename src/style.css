@@ -2,3 +2,9 @@
     transform: scale(0.8);
     transform-origin: 0 100%;
 }
+
+@media screen and (max-width: 640px) {
+    .non-activate {
+        transform: scale(1);
+    }
+}

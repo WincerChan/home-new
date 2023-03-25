@@ -11,10 +11,13 @@ module.exports = {
 					"dark": "#EDEDEF"
 				},
 				"bgs": {
-					"dark": "#B8BFC3"
+					"dark": "#c7d2d4"
 				},
 				"heading": {
-					"dark": "#fffef8"
+					"dark": "#4d4030"
+				},
+				"footer": {
+					"dark": "#4F383E"
 				}
 			},
 			"fontFamily": {
