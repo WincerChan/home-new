@@ -36,7 +36,7 @@ const Paginate = (props) => {
 
 const Portfolio = (props) => {
     let projects = props.config.Portfolio;
-    const [activeIndex, setActiveIndex] = createSignal(projects.length - 1);
+    const [activeIndex, setActiveIndex] = createSignal(0);
     const [showAnimate, setShowAnimate] = createSignal(true);
     const [timer, setTimer] = createSignal(null);
     let oneDistant;
