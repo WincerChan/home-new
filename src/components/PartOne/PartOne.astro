@@ -3,23 +3,7 @@ import UserProfile from "./UserProfile.astro";
 import SvgBackground from "../shared/SvgBackground";
 ---
 
-<script>
-    addEventListener("scroll", (event) => {
-        const scrollTop = document.documentElement.scrollTop;
-        const scrollHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-        const coverElement = document.getElementById("cover");
-        if (scrollTop > scrollHeight - 256) {
-            coverElement.classList.remove("hidden");
-        } else {
-            coverElement.classList.add("hidden");
-        }
-    });
-</script>
-
-<div id="fullblur" class="flex sticky top-0 left-0 flex-col h-screen">
-    <div id="cover" class="absolute top-0 left-0 w-full h-full bg-opacity-30">
-    </div>
+<div id="fullblur" class="flex w-full fixed flex-col h-screen">
     <SvgBackground {...Astro.props} position={"top"} />
     <UserProfile {...Astro.props} />
 </div>

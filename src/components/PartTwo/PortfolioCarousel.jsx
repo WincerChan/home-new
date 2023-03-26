@@ -1,4 +1,4 @@
-import { For, createSignal, onCleanup, createEffect } from "solid-js";
+import { For, createSignal, onCleanup, createEffect, onMount } from "solid-js";
 
 const Project = (props) => {
     const { activeIndex, project, projectsSize, currIndex } = props;
@@ -59,7 +59,6 @@ const Portfolio = (props) => {
         setActiveIndex(0)
     }
     const setIndex = (idx) => {
-        console.log("set index", activeIndex(), portfolioElement, oneDistant, showAnimate())
         setActiveIndex(idx)
     }
     const startTimer = () => {
@@ -69,7 +68,9 @@ const Portfolio = (props) => {
         clearInterval(timer());
     };
     createEffect(updateActiveIndex)
-
+    onMount(() => {
+        window.addEventListener("resize", () => { setIndex(0) })
+    })
     onCleanup(() => {
         setActiveIndex(0);
         setShowAnimate(true)
