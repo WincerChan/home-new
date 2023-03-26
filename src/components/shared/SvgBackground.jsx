@@ -13,10 +13,10 @@ const SvgBackground = (props) => {
     return (
         <>
             <Show when={position === "bottom"}>
-                <div className="bg-cover bg-top h-36 absolute bottom-0 w-full" style={style} />
+                <div className="bg-cover bg-top h-[146px] absolute bottom-0 z-20 w-full" style={style} />
             </Show>
             <Show when={position === "top"}>
-                <div class="bg-cover bg-center h-52 2xl:h-64" style={style} />
+                <div class="bg-cover bg-center h-36 sm:h-52 2xl:h-64" style={style} />
             </Show>
         </>
     )
