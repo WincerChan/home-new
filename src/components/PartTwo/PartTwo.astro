@@ -1,0 +1,17 @@
+---
+import Footprint from "./DigitalFootprint";
+import Portfolio from "./PortfolioCarousel";
+import Footer from "./Copyright.astro";
+import SvgBackground from "../shared/SvgBackground";
+---
+
+<SvgBackground position={"bottom"} {...Astro.props} />
+<div class="bg-bgs-dark" style="transform: translateZ(0);">
+    <div
+        class="w-full px-6 sm:px-0 overflow-x-hidden md:w-[40rem] lg:w-[56rem] lg:px-32 mx-auto bg-bgs-dark"
+    >
+        <Footprint {...Astro.props} />
+        <Portfolio client:visible {...Astro.props} interval={5} />
+        <Footer />
+    </div>
+</div>
