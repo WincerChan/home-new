@@ -19,6 +19,8 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
+    "@babel/core": ">=7.20.12 <8.0.0",
+    "@types/node": "^18.15.9",
     "vite-plugin-string": "^1.2.1"
   }
 }

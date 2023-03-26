@@ -1,0 +1,16 @@
+---
+import UserProfile from "./Profile.astro";
+import SecondPage from "./Second";
+
+const { svgAsset, config } = Astro.props;
+
+const style = {
+  "background-image": `url('${svgAsset.bgTop}')`,
+};
+---
+
+<div class="flex w-full sticky top-0 left-0 flex-col h-screen">
+  <div class="bg-cover bg-center h-52 2xl:h-64" style={style}></div>;
+  <UserProfile {...Astro.props} />
+</div>
+<SecondPage client:visible {...Astro.props} />

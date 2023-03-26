@@ -3,6 +3,10 @@
     transform-origin: 0 100%;
 }
 
+.blur-xs {
+    filter: blur(2px)
+}
+
 @media screen and (max-width: 640px) {
     .non-activate {
         transform: scale(1);
