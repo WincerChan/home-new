@@ -3,6 +3,7 @@ import PartOne from "../components/PartOne/PartOne.astro";
 import PartTwo from "../components/PartTwo/PartTwo.astro";
 
 import { loadAllSvgs, loadConfig, adjustColor } from "../compile_utils.js";
+import "@fontsource/varela-round";
 import "../style.css";
 
 const config = loadConfig();
@@ -16,11 +17,19 @@ const svgs = loadAllSvgs();
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="referrer" content="same-origin" />
-		<title>Wincer</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-			rel="stylesheet"
-		/>
+		<title>{config.name.base}</title>
+		<meta name="description" content={config.description} />
+		<!-- Open Graph tags -->
+		<meta property="og:title" content={config.name.base} />
+		<meta property="og:description" content={config.description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={config.websiteUrl} />
+		<meta property="og:image" content={config.avatar} />
+		<!-- Twitter Card tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={config.name.base} />
+		<meta name="twitter:description" content={config.description} />
+		<meta name="twitter:image" content={config.avatar} />
 	</head>
 	<body class="bg-bgc-dark font-round">
 		<PartOne config={config} svgAsset={svgs} />
