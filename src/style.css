@@ -12,3 +12,16 @@
         transform: scale(1);
     }
 }
+
+html::-webkit-scrollbar {
+    /* Safari 和 Chrome */
+    display: none;
+}
+
+html {
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE 和 Edge */
+    -ms-overflow-style: none;
+
+}
