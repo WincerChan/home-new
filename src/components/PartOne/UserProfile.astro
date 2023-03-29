@@ -12,23 +12,25 @@ const email = Buffer.from(config.email).toString("base64");
         emailLink.href = `mailto:${atob(base64Email)}`;
     });
 </script>
-<div
-    class="w-full md:w-[40rem] lg:w-[44rem] 2xl:w-[48rem] leading-relaxed mx-auto"
->
+<div class="w-full md:w-[40rem] lg:w-[44rem] 2xl:w-[48rem] mx-auto">
     <div
         class="flex flex-col-reverse mx-6 md:mx-0 md:flex-row text-title-dark justify-between"
     >
         <div>
-            <h1 class="text-2xl my-2 md:text-4xl">
+            <h1 class="text-3xl sm:my-2 md:text-4xl leading-relaxed">
                 {config.name.base}
-                <span class="font-sans md:text-xl">{config.name.note}</span>
+                <span class="font-sans text-base md:text-xl"
+                    >{config.name.note}</span
+                >
             </h1>
-            <p class="font-light text-sm 2xl:text-lg sm:text-base">
+            <p
+                class="font-light text-sm 2xl:text-lg sm:text-base 2xl:leading-loose"
+            >
                 {config.desc}
             </p>
         </div>
         <img
-            class="h-16 w-16 sm:h-24 sm:w-24 rounded-full"
+            class="w-20 border border-l-bgs-dark sm:w-24 2xl:w-[6.5rem] my-2 rounded-full"
             src={config.avatar}
             alt={config.name.base}
         />

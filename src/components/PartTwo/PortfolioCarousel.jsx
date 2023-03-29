@@ -1,4 +1,4 @@
-import { For, createSignal, onCleanup, createEffect, onMount } from "solid-js";
+import { createEffect, createSignal, For, onCleanup, onMount } from "solid-js";
 
 const Project = (props) => {
     const { activeIndex, project, projectsSize, currIndex } = props;
@@ -6,7 +6,7 @@ const Project = (props) => {
         'background-image': `url('${project.cover}')`
     }
     return (
-        <a href={project.url} target="_blank" className={`${(currIndex() % projectsSize) === (activeIndex() % projectsSize) ? '' : 'non-activate'} h-56 2xl:h-64 overflow-hidden w-[calc(100vw-3rem)]  2xl:w-[26rem] sm:w-[23rem] bg-[#fffefa] bg-opacity-50 rounded-3xl leading-relaxed transition-all duration-500`}>
+        <a href={project.url} target="_blank" className={`${(currIndex() % projectsSize) === (activeIndex() % projectsSize) ? '' : 'non-activate'} h-52 sm:h-56 2xl:h-64 overflow-hidden w-[calc(100vw-3rem)]  2xl:w-[26rem] sm:w-[23rem] bg-[#fffefa] bg-opacity-50 rounded-3xl leading-relaxed transition-all duration-500`}>
             <div style={style}
                 className="h-1/2 bg-cover bg-center"
             />
@@ -80,8 +80,8 @@ const Portfolio = (props) => {
     startTimer()
     return (
         <>
-            <h2 className=" text-heading-dark mb-3 2xl:mb-5 text-2xl 2xl:text-3xl mt-10 2xl:mt-12 leading-relaxed">Portfolio</h2>
-            <div className="overflow-x-hidden w-full"
+            <h2 className=" text-heading-dark my-3 2xl:my-6 2xl:mb-5 text-2xl 2xl:text-3xl leading-loose">Portfolio</h2>
+            <div className="overflow-x-hidden w-full 2xl:mb-12 xl:mb-8 sm:mb-6 mb-4"
                 onMouseEnter={stopTimer}
                 onMouseLeave={startTimer}
             >
