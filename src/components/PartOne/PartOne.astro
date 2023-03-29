@@ -1,9 +1,9 @@
 ---
-import UserProfile from "./UserProfile.astro";
 import SvgBackground from "../shared/SvgBackground";
+import UserProfile from "./UserProfile.astro";
 ---
 
-<div id="fullblur" class="flex w-full fixed flex-col h-screen">
+<div class="grid grid-rows-3 w-full fixed h-screen">
     <SvgBackground {...Astro.props} position={"top"} />
     <UserProfile {...Astro.props} />
 </div>
