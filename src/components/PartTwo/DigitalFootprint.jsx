@@ -9,7 +9,7 @@ const Link = (props) => {
     };
     return (
         <a href={link.url} target="_blank">
-            <button title={link.name} className="w-full p-4 rounded-full flex" style={style}>
+            <button title={link.name} className="w-full p-4 rounded-full flex 2xl:text-xl" style={style}>
                 <img className="mr-4" src={svgAsset[link.name]} />
                 <span>{link.title}</span>
             </button>
@@ -21,7 +21,7 @@ const Footprint = (props) => {
     const { config, svgAsset } = props;
     return (
         <>
-            <h2 className=" text-heading-dark text-2xl mb-3 leading-relaxed">Footprint</h2>
+            <h2 className=" text-heading-dark text-2xl 2xl:text-3xl mb-3 2xl:mb-5 2xl:mt-2 leading-relaxed">Footprint</h2>
             <div className="grid gap-6 sm:grid-cols-3 leading-relaxed text-heading-dark">
                 <For each={config.links}>
                     {(link, _i) => <Link link={link} svgAsset={svgAsset} />}

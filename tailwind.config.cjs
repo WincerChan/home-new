@@ -21,7 +21,7 @@ module.exports = {
 				}
 			},
 			"fontFamily": {
-				"round": ['Varela Round'],
+				"round": ['Varela Round', 'sans-serif'],
 			}
 		},
 	},
