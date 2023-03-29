@@ -12,7 +12,9 @@ const email = Buffer.from(config.email).toString("base64");
         emailLink.href = `mailto:${atob(base64Email)}`;
     });
 </script>
-<div class="w-full md:w-[40rem] leading-relaxed mx-auto my-12 flex-grow">
+<div
+    class="w-full md:w-[40rem] lg:w-[44rem] 2xl:w-[48rem] leading-relaxed mx-auto my-12 xl:my-20 flex-grow"
+>
     <div
         class="flex flex-col-reverse mx-6 md:mx-0 md:flex-row text-title-dark justify-between"
     >
@@ -21,7 +23,9 @@ const email = Buffer.from(config.email).toString("base64");
                 {config.name.base}
                 <span class="font-sans md:text-xl">{config.name.note}</span>
             </h1>
-            <p class="font-light text-sm sm:text-base">{config.desc}</p>
+            <p class="font-light text-sm 2xl:text-lg sm:text-base">
+                {config.desc}
+            </p>
         </div>
         <img
             class="h-16 w-16 sm:h-24 sm:w-24 rounded-full"
