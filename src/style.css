@@ -13,6 +13,12 @@
     }
 }
 
+@media screen and (max-height: 700px) {
+    #profile {
+        margin-top: -2rem;
+    }
+}
+
 html::-webkit-scrollbar {
     /* Safari 和 Chrome */
     display: none;
