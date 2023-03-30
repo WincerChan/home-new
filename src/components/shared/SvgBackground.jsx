@@ -7,6 +7,8 @@ const PartTwoBackground = (props) => {
     let startX, startY;
     const handleMobileScroll = (e) => {
         const deltaY = e.changedTouches[0].clientY - startY;
+        if (Math.abs(deltaY) < 5) return;
+
         e.preventDefault();
 
         const scrollHeight = document.documentElement.scrollHeight;
