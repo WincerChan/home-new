@@ -5,6 +5,8 @@ const PartTwoBackground = (props) => {
     const [scrollDirection, setScrollDirection] = createSignal('down');
     const [potision, setPotision] = createSignal("bottom");
     let startX, startY;
+    const { style } = props;
+    style['filter'] = 'drop-shadow(0px -1.5rem 4rem #000b)';
     const handleMobileScroll = (e) => {
         const deltaY = e.changedTouches[0].clientY - startY;
         if (Math.abs(deltaY) < 5) return;
@@ -98,7 +100,7 @@ const SvgBackground = (props) => {
     else
         svgBg = svgAsset.bgBottom;
     const style = {
-        'background-image': `url('${svgBg}')`
+        'background-image': `url('${svgBg}')`,
     }
     return (
         <>
