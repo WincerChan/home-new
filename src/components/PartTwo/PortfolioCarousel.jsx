@@ -81,7 +81,7 @@ const Portfolio = (props) => {
     return (
         <>
             <h2 className=" text-heading-dark my-3 2xl:my-6 2xl:mb-5 text-2xl 2xl:text-3xl leading-loose">Portfolio</h2>
-            <div className="overflow-x-hidden w-full 2xl:mb-12 xl:mb-8 sm:mb-6 mb-4"
+            <div className="overflow-x-hidden w-full 2xl:mb-12 xl:mb-6 sm:mb-6 mb-4"
                 onMouseEnter={stopTimer}
                 onMouseLeave={startTimer}
             >

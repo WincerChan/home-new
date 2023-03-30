@@ -28,19 +28,19 @@ color = "#22A6DC"
 [[Portfolio]]
 name = "TalkGPT"
 url = "https://github.com/WincerChan/TalkGPT"
-cover = "https://pic.imgdb.cn/item/641e7af1a682492fcc3734c7.jpg"
+cover = "https://docimg8.docs.qq.com/image/AgAAC6u-TVOqJ7xhjOlJO6a6jqKZrJtG.jpeg"
 desc = "CLI tool for voice conversation with ChatGPT"
 
 [[Portfolio]]
 name = "Meme-Generator"
 url = "https://github.com/WincerChan/Meme-Generator"
-cover = "https://pic.imgdb.cn/item/641e7c52a682492fcc3a385b.jpg"
+cover = "https://docimg9.docs.qq.com/image/AgAAC6u-TVMTt8F3UcFOCIab4D_LtvY5.jpeg"
 desc = "Meme Generator for pure javascript"
 
 [[Portfolio]]
 name = "Mirror"
 url = "https://github.com/WincerChan/Mirror"
-cover = "https://pic.imgdb.cn/item/641e7cb0a682492fcc3abb28.jpg"
+cover = "https://docimg7.docs.qq.com/image/AgAAC6u-TVOTlJ61ksRDvKC_YBrOjKNV.jpeg"
 desc = "Golang reverse proxy tool"
 
 [[Portfolio]]
