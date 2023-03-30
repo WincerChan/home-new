@@ -75,9 +75,9 @@ const PartTwoBackground = (props) => {
 
     return (
 
-        <div className="bg-cover  bg-top h-[146px] 2xl:h-48 absolute flex justify-center items-center bottom-0 z-20 w-full" style={props.style} >
+        <div className="bg-cover bg-top h-[12.5rem] 2xl:h-[17rem] absolute flex justify-center items-end bottom-0 z-20 w-full" style={props.style} >
 
-            <svg className={`animate-bounce mt-12 text-heading-dark transition-opacity ease-in duration-300 ${potision() === "bottom" ? "opacity-100" : "opacity-0"}`} width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className={`animate-bounce text-heading-dark transition-opacity ease-in duration-300 mb-8 ${potision() === "bottom" ? "opacity-100" : "opacity-0"}`} width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M51 1.24995L26 26.5L1 1.24995" stroke="currentColor" />
             </svg>
 
