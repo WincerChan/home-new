@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   '@astrojs/solid-js': ^2.1.0
@@ -9,17 +9,19 @@ specifiers:
   '@types/node': ^18.15.9
   astro: ^2.1.3
   astrojs-service-worker: ^1.0.0
+  smoothscroll-polyfill: ^0.4.4
   solid-js: ^1.4.3
   tailwindcss: ^3.0.24
   vite-plugin-string: ^1.2.1
 
 dependencies:
-  '@astrojs/solid-js': 2.1.0_dsitkantby7dzc62rjcsc55bgi
-  '@astrojs/tailwind': 3.1.1_2l4ywwlgzw2satesmi43zum3jy
+  '@astrojs/solid-js': 2.1.0_1c913501b30e3e3c8bda8a452177a132
+  '@astrojs/tailwind': 3.1.1_astro@2.1.3+tailwindcss@3.2.7
   '@fontsource/varela-round': 4.5.9
   '@iarna/toml': 2.2.5
   astro: 2.1.3_@types+node@18.15.9
   astrojs-service-worker: 1.0.0_astro@2.1.3
+  smoothscroll-polyfill: 0.4.4
   solid-js: 1.6.15
   tailwindcss: 3.2.7
 
@@ -106,7 +108,7 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/solid-js/2.1.0_dsitkantby7dzc62rjcsc55bgi:
+  /@astrojs/solid-js/2.1.0_1c913501b30e3e3c8bda8a452177a132:
     resolution: {integrity: sha512-p07DP9NRWJPjtF+CzPZ9lzOMkoyw6wSs3S6g3OZUxR+DVQy3VIXXDqCcnZZVJI34VakkHuViZaoNNkBW/9I54w==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
@@ -120,7 +122,7 @@ packages:
       - vite
     dev: false
 
-  /@astrojs/tailwind/3.1.1_2l4ywwlgzw2satesmi43zum3jy:
+  /@astrojs/tailwind/3.1.1_astro@2.1.3+tailwindcss@3.2.7:
     resolution: {integrity: sha512-Wx/ZtVnmtfqHWGVzvUEYZm8rufVKVgDIef0q6fzwUxoT1EpTTwBkTbpnzooogewMLOh2eTscasGe3Ih2HC1wVA==}
     peerDependencies:
       astro: ^2.1.3
@@ -1621,7 +1623,7 @@ packages:
       escalade: 3.1.1
     dev: false
 
-  /@rollup/plugin-babel/5.3.1_4dq7jctzp4aabcbdymaxurjcle:
+  /@rollup/plugin-babel/5.3.1_@babel+core@7.21.3+rollup@2.77.3:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -4727,6 +4729,10 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
+  /smoothscroll-polyfill/0.4.4:
+    resolution: {integrity: sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==}
+    dev: false
+
   /solid-js/1.6.15:
     resolution: {integrity: sha512-xEuMUIdDf4YRFT4i3XEJCNg4Y21lZiWWPSEqj0R3UnLLpENGJVXkqpmbIyRU5CuMImKPIEu5CYgmFKL7Npfe1A==}
     dependencies:
@@ -5504,7 +5510,7 @@ packages:
       '@babel/core': 7.21.3
       '@babel/preset-env': 7.20.2_@babel+core@7.21.3
       '@babel/runtime': 7.21.0
-      '@rollup/plugin-babel': 5.3.1_4dq7jctzp4aabcbdymaxurjcle
+      '@rollup/plugin-babel': 5.3.1_@babel+core@7.21.3+rollup@2.77.3
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.77.3
       '@rollup/plugin-replace': 2.4.2_rollup@2.77.3
       '@surma/rollup-plugin-off-main-thread': 2.2.3
