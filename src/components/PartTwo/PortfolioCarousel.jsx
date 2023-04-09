@@ -12,7 +12,7 @@ const Project = (props) => {
             />
             <div className="py-4 px-6">
 
-                <h3 className="text-lg 2xl:text-xl text-heading-dark">{project.name}</h3>
+                <h3 className="text-lg 2xl:text-xl text-darkBrown">{project.name}</h3>
                 <p className="text-sm 2xl:text-base text-[#503e2a]">{project.desc}</p>
             </div>
         </a>
@@ -26,7 +26,7 @@ const Paginate = (props) => {
             <For each={projects}>
                 {(_item, i) => {
                     return <button onClick={() => setIndex(i())} className="p-2">
-                        <div className={`h-[6px] w-[6px] rounded-full ${i() === activeIndex() % projectsSize ? 'bg-heading-dark' : 'bg-[#81776e]'}`}></div>
+                        <div className={`h-[6px] w-[6px] rounded-full ${i() === activeIndex() % projectsSize ? 'bg-darkBrown' : 'bg-[#81776e]'}`}></div>
                     </button>
                 }}
             </For>
@@ -80,7 +80,7 @@ const Portfolio = (props) => {
     startTimer()
     return (
         <>
-            <h2 className=" text-heading-dark my-3 2xl:my-6 2xl:mb-5 text-2xl 2xl:text-3xl leading-loose">Portfolio</h2>
+            <h2 className=" text-darkBrown my-3 2xl:my-6 2xl:mb-5 text-2xl 2xl:text-3xl leading-loose">Portfolio</h2>
             <div className="overflow-x-hidden w-full 2xl:mb-12 xl:mb-6 sm:mb-6 mb-4"
                 onMouseEnter={stopTimer}
                 onMouseLeave={startTimer}
