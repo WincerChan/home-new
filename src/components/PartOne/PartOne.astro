@@ -5,7 +5,7 @@ import UserProfile from "./UserProfile.astro";
 const { svgAsset } = Astro.props;
 ---
 
-<div class="grid grid-rows-3 w-full fixed h-screen">
+<div class=":: grid grid-rows-3 w-full fixed h-screen">
     <SvgBackground svgAsset={svgAsset} position={"top"} />
     <UserProfile {...Astro.props} />
     <div></div>

@@ -1,4 +1,4 @@
-import { defineConfig, presetAttributify, presetWind } from 'unocss'
+import { defineConfig, presetAttributify, presetWind, transformerCompileClass } from 'unocss'
 
 export default defineConfig({
     presets: [
@@ -17,5 +17,8 @@ export default defineConfig({
             'darkBrown': '#4d4030',
             'rosyBrown': '#4f383e'
         }
-    }
+    },
+    transformers: [
+        transformerCompileClass({ trigger: '::' })
+    ]
 })

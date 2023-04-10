@@ -22,6 +22,7 @@
     "@babel/core": ">=7.20.12 <8.0.0",
     "@types/node": "^18.15.9",
     "@unocss/reset": "^0.51.2",
+    "@unocss/transformer-compile-class": "^0.51.2",
     "unocss": "^0.51.2",
     "vite-plugin-string": "^1.2.1"
   }

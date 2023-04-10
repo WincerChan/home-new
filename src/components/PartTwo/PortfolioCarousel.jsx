@@ -8,12 +8,12 @@ const Project = (props) => {
     return (
         <a href={project.url} target="_blank" className={`${(currIndex() % projectsSize) === (activeIndex() % projectsSize) ? '' : 'non-activate'} h-52 sm:h-56 2xl:h-64 overflow-hidden w-[calc(100vw-3rem)]  2xl:w-[26rem] sm:w-[23rem] bg-[#fffefa] bg-opacity-50 rounded-3xl leading-relaxed transition-all duration-500`}>
             <div style={style}
-                className="h-1/2 bg-cover bg-center"
+                className=":: h-1/2 bg-cover bg-center"
             />
-            <div className="py-4 px-6">
+            <div className=":: py-4 px-6">
 
-                <h3 className="text-lg 2xl:text-xl text-darkBrown">{project.name}</h3>
-                <p className="text-sm 2xl:text-base text-[#503e2a]">{project.desc}</p>
+                <h3 className=":: text-lg 2xl:text-xl text-darkBrown">{project.name}</h3>
+                <p className=":: text-sm 2xl:text-base text-[#503e2a]">{project.desc}</p>
             </div>
         </a>
     )
@@ -22,10 +22,10 @@ const Project = (props) => {
 const Paginate = (props) => {
     const { projects, setIndex, activeIndex, projectsSize } = props
     return (
-        <div className="flex h-6 space-x-8 justify-center my-3 2xl:my-5">
+        <div className=":: flex h-6 space-x-8 justify-center my-3 2xl:my-5">
             <For each={projects}>
                 {(_item, i) => {
-                    return <button onClick={() => setIndex(i())} className="p-2">
+                    return <button onClick={() => setIndex(i())} className=":: p-2">
                         <div className={`h-[6px] w-[6px] rounded-full ${i() === activeIndex() % projectsSize ? 'bg-darkBrown' : 'bg-[#81776e]'}`}></div>
                     </button>
                 }}
@@ -80,8 +80,8 @@ const Portfolio = (props) => {
     startTimer()
     return (
         <>
-            <h2 className=" text-darkBrown my-3 2xl:my-6 2xl:mb-5 text-2xl 2xl:text-3xl leading-loose">Portfolio</h2>
-            <div className="overflow-x-hidden w-full 2xl:mb-12 xl:mb-6 sm:mb-6 mb-4"
+            <h2 className="::  text-darkBrown my-3 2xl:my-6 2xl:mb-5 text-2xl 2xl:text-3xl leading-loose">Portfolio</h2>
+            <div className=":: overflow-x-hidden w-full 2xl:mb-12 xl:mb-6 sm:mb-6 mb-4"
                 onMouseEnter={stopTimer}
                 onMouseLeave={startTimer}
             >
