@@ -1,13 +1,15 @@
-import fs from "fs";
 import TOML from "@iarna/toml";
+import fs from "fs";
 
 import path from 'path';
+import type { Config } from "./config";
+
 
 export function loadAllSvgs() {
   const svgDir = path.join(process.cwd(), 'public', 'img');
   const files = fs.readdirSync(svgDir);
   const svgFiles = files.filter((file) => path.extname(file).toLowerCase() === '.svg');
-  const svgs = {};
+  const svgs = Object();
 
   for (const svgFile of svgFiles) {
     const filePath = path.join(svgDir, svgFile);
@@ -20,25 +22,9 @@ export function loadAllSvgs() {
   return svgs;
 }
 
+
 export function loadConfig() {
   const configFile = fs.readFileSync('config.toml', 'utf8');
   const config = TOML.parse(configFile);
-  return config;
-}
-
-export function adjustColor(color, amount) {
-  const colorInt = parseInt(color.slice(1), 16);
-  const r = (colorInt >> 16) + amount;
-  const g = ((colorInt >> 8) & 0x00FF) + amount;
-  const b = (colorInt & 0x0000FF) + amount;
-
-  return '#' + (
-    ((clamp(r) << 16) | (clamp(g) << 8) | clamp(b))
-      .toString(16)
-      .padStart(6, '0')
-  ) + '19';
-}
-
-function clamp(value, min = 0, max = 255) {
-  return Math.min(Math.max(value, min), max);
+  return config as unknown as Config;
 }

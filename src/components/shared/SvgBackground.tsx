@@ -1,6 +1,6 @@
-import { createSignal, onMount, Show } from "solid-js";
+import { createSignal, JSX, onMount, Show } from "solid-js";
 
-const PartTwoBackground = (props) => {
+const PartTwoBackground = (props: { style: string | JSX.CSSProperties | undefined; }) => {
     const [potision, setPotision] = createSignal("top");
 
     const updatePositionByScrollTop = () => {
@@ -34,7 +34,7 @@ const PartTwoBackground = (props) => {
 
 }
 
-const SvgBackground = (props) => {
+const SvgBackground = (props: { position: string; svgAsset: any; }) => {
     const { position, svgAsset } = props;
 
     let svgBg;

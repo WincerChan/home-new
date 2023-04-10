@@ -1,5 +1,5 @@
 
-export function adjustColor(color, amount) {
+export function adjustColor(color: string, amount: number) {
   const colorInt = parseInt(color.slice(1), 16);
   const r = (colorInt >> 16) + amount;
   const g = ((colorInt >> 8) & 0x00FF) + amount;
@@ -12,6 +12,6 @@ export function adjustColor(color, amount) {
   ) + '33';
 }
 
-function clamp(value, min = 0, max = 255) {
+function clamp(value: number, min = 0, max = 255) {
   return Math.min(Math.max(value, min), max);
 }
