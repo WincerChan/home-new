@@ -7,9 +7,13 @@ const email = Buffer.from(config.email).toString("base64");
     document.addEventListener("DOMContentLoaded", () => {
         const emailLink = document.getElementById("email-link");
         const emailText = document.getElementById("email-text");
+        if (!emailLink || !emailText) return;
         const base64Email = emailText.getAttribute("data-email");
-        emailText.innerHTML = atob(base64Email);
-        emailLink.href = `mailto:${atob(base64Email)}`;
+        if (!base64Email) return;
+
+        emailText.innerHTML = window.atob(base64Email);
+        // @ts-ignore
+        emailLink.href = `mailto:${window.atob(base64Email)}`;
     });
 </script>
 <div class="w-full md:w-[40rem] lg:w-[44rem] 2xl:w-[48rem] mx-auto">

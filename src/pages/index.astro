@@ -18,17 +18,17 @@ const svgs = loadAllSvgs();
 		<meta name="generator" content={Astro.generator} />
 		<meta name="referrer" content="same-origin" />
 		<title>{config.name.base}</title>
-		<meta name="description" content={config.description} />
+		<meta name="description" content={config.desc} />
 		<!-- Open Graph tags -->
 		<meta property="og:title" content={config.name.base} />
-		<meta property="og:description" content={config.description} />
+		<meta property="og:description" content={config.desc} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={config.websiteUrl} />
+		<meta property="og:url" content={config.website} />
 		<meta property="og:image" content={config.avatar} />
 		<!-- Twitter Card tags -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={config.name.base} />
-		<meta name="twitter:description" content={config.description} />
+		<meta name="twitter:description" content={config.desc} />
 		<meta name="twitter:image" content={config.avatar} />
 	</head>
 	<body class="bg-slateGray font-rounded">
