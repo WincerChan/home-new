@@ -7,7 +7,7 @@ export default defineConfig({
     ],
     rules: [
         ['font-rounded', { 'font-family': 'Varela Round, sans-serif' }],
-        ['bg-shadow', { 'filter': 'drop-shadow(0px 0px 54px #f2ecde66)' }]
+        ['bg-shadow', { 'filter': 'drop-shadow(0px 0px 30px #f2ecde66)' }]
     ],
     theme: {
         colors: {

@@ -22,7 +22,7 @@ const PartTwoBackground = (props) => {
 
         <div
             bg="cover top shadow"
-            className="h-[146px] 2xl:h-48 absolute flex justify-center items-end bottom-0 z-20 w-full" style={props.style} >
+            className="h-[146px] 2xl:h-48 absolute -mb-1px flex justify-center items-end bottom-0 z-20 w-full" style={props.style} >
 
             <svg className={`animate-bounce text-darkBrown transition-opacity ease-in duration-300 mb-8 ${potision() === "bottom" ? "opacity-100" : "opacity-0"}`} width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M51 1.24995L26 26.5L1 1.24995" stroke="currentColor" />
