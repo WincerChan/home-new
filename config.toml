@@ -1,4 +1,4 @@
-avatar = "https://ae01.alicdn.com/kf/HTB1DdGHXizxK1RjSspj763S.pXax.png"
+avatar = "https://ae02.alicdn.com/kf/Aeadf9a8f9b1246a580924fc003e514c8E.jpg"
 desc = "Technology craftsman ( Developer, Designer, Blogger )"
 email = "WincerChan@gmail.com"
 
@@ -10,7 +10,7 @@ note = "/ˈwɪnsə(r)/"
 name = "blog"
 url = "https://blog.itswincer.com"
 color = "#FF9A00"
-title = "Wincer's Blog" 
+title = "Wincer's Blog"
 
 [[links]]
 name = "github"
@@ -20,7 +20,7 @@ title = '@WincerChan'
 
 [[links]]
 name = "telegram"
-url ="https://t.me/Tivsae"
+url = "https://t.me/Tivsae"
 title = '@Tivsae'
 color = "#22A6DC"
 
