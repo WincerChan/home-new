@@ -2,7 +2,6 @@
 import Email from "./Email";
 
 const { config, svgAsset } = Astro.props;
-const email = Buffer.from(config.email).toString("base64");
 ---
 
 <div class="w-full md:w-[40rem] lg:w-[44rem] 2xl:w-[48rem] mx-auto">
@@ -29,5 +28,9 @@ const email = Buffer.from(config.email).toString("base64");
             alt={config.name.base}
         />
     </div>
-    <Email client:visible base64email={email} mailicon={svgAsset['mail']} />
+    <Email
+        client:visible
+        base64email={config.email}
+        mailicon={svgAsset["mail"]}
+    />
 </div>

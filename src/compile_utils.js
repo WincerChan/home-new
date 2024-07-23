@@ -1,5 +1,5 @@
-import fs from "fs";
 import TOML from "@iarna/toml";
+import fs from "fs";
 
 import path from 'path';
 
@@ -23,6 +23,7 @@ export function loadAllSvgs() {
 export function loadConfig() {
   const configFile = fs.readFileSync('config.toml', 'utf8');
   const config = TOML.parse(configFile);
+  config.email = Buffer.from(config.email).toString("base64")
   return config;
 }
 
