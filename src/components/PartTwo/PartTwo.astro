@@ -1,6 +1,6 @@
 ---
 import SvgBackground from "../shared/SvgBackground";
-import Footer from "./Copyright.astro";
+import Footer from "./Copyright";
 import Footprint from "./DigitalFootprint";
 import Portfolio from "./PortfolioCarousel";
 ---
@@ -12,6 +12,6 @@ import Portfolio from "./PortfolioCarousel";
     >
         <Footprint {...Astro.props} />
         <Portfolio client:visible {...Astro.props} interval={5} />
-        <Footer />
+        <Footer client:visible />
     </div>
 </div>

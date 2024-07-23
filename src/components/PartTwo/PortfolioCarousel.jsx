@@ -1,23 +1,43 @@
 import { createEffect, createSignal, For, onCleanup, onMount } from "solid-js";
 
+
 const Project = (props) => {
     const { activeIndex, project, projectsSize, currIndex } = props;
-    let style = {
-        'background-image': `url('${project.cover}')`
-    }
+    let divRef;
+
+    createEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    divRef.style.backgroundImage = `url('${project.cover}')`;
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (divRef) {
+            observer.observe(divRef);
+        }
+
+        return () => {
+            if (divRef) {
+                observer.unobserve(divRef);
+            }
+        };
+    });
+
     return (
         <a href={project.url} target="_blank" className={`${(currIndex() % projectsSize) === (activeIndex() % projectsSize) ? '' : 'non-activate'} h-52 sm:h-56 2xl:h-64 overflow-hidden w-[calc(100vw-3rem)]  2xl:w-[26rem] sm:w-[23rem] bg-[#fffefa] bg-opacity-50 rounded-3xl leading-relaxed transition-all duration-500`}>
-            <div style={style}
+            <div ref={el => divRef = el}
                 className="h-1/2 bg-cover bg-center"
             />
             <div className="py-4 px-6">
-
                 <h3 className="text-lg 2xl:text-xl text-darkBrown">{project.name}</h3>
                 <p className="text-sm 2xl:text-base text-[#503e2a]">{project.desc}</p>
             </div>
         </a>
-    )
-}
+    );
+};
 
 const Paginate = (props) => {
     const { projects, setIndex, activeIndex, projectsSize } = props

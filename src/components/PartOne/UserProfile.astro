@@ -1,17 +1,10 @@
 ---
+import Email from "./Email";
+
 const { config, svgAsset } = Astro.props;
 const email = Buffer.from(config.email).toString("base64");
 ---
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const emailLink = document.getElementById("email-link");
-        const emailText = document.getElementById("email-text");
-        const base64Email = emailText.getAttribute("data-email");
-        emailText.innerHTML = atob(base64Email);
-        emailLink.href = `mailto:${atob(base64Email)}`;
-    });
-</script>
 <div class="w-full md:w-[40rem] lg:w-[44rem] 2xl:w-[48rem] mx-auto">
     <div
         id="profile"
@@ -36,11 +29,5 @@ const email = Buffer.from(config.email).toString("base64");
             alt={config.name.base}
         />
     </div>
-    <a
-        id="email-link"
-        class="mx-auto mt-16 sm:mt-24 2xl:mt-32 flex w-fit border border-[#080808] rounded-full p-4 bg-[#434343]"
-    >
-        <img src={svgAsset["mail"]} class="mr-4" />
-        <p class="text-gainsboro" id="email-text" data-email={email}></p>
-    </a>
+    <Email client:visible base64email={email} mailicon={svgAsset['mail']} />
 </div>
