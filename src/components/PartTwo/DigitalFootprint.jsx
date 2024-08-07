@@ -1,17 +1,22 @@
-import { For } from "solid-js";
+import { createSignal, For, onMount } from "solid-js";
 import { adjustColor } from "../../runtime_utils";
 
 const Link = (props) => {
+    const [title, setTitle] = createSignal("")
     const { link, svgAsset } = props;
     let gradColor = adjustColor(link.color, 0);
     let style = {
         "background-color": `${gradColor}`
     };
+    onMount(() => {
+        setTitle(atob(link.title))
+    })
+
     return (
         <a href={link.url} target="_blank">
             <button title={link.name} className="w-full lg:p-4 p-3 rounded-full flex 2xl:text-xl text-lg" style={style}>
                 <img className="mr-3 lg:mr-4" src={svgAsset[link.name]} />
-                <span>{link.title}</span>
+                <span>{title()}</span>
             </button>
         </a>
     )
