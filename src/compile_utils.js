@@ -24,6 +24,9 @@ export function loadConfig() {
   const configFile = fs.readFileSync('config.toml', 'utf8');
   const config = TOML.parse(configFile);
   config.email = Buffer.from(config.email).toString("base64")
+  config.links.forEach(x => {
+    x.title = Buffer.from(x.title).toString("base64")
+  })
   return config;
 }
 
