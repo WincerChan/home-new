@@ -1,21 +1,15 @@
-import { defineConfig, presetAttributify, presetWind } from 'unocss'
+import presetIcons from "@unocss/preset-icons";
+import { defineConfig, presetWind, presetWebFonts } from "unocss";
 
 export default defineConfig({
-    presets: [
-        presetWind(),
-        presetAttributify()
-    ],
-    rules: [
-        ['font-rounded', { 'font-family': 'Varela Round, sans-serif' }],
-        ['bg-shadow', { 'filter': 'drop-shadow(0px 0px 30px #f2ecde66)' }]
-    ],
-    theme: {
-        colors: {
-            'slateGray': '#1C1C1C',
-            'gainsboro': '#ededef',
-            'sliverSand': '#f2ecde',
-            'darkBrown': '#4d4030',
-            'rosyBrown': '#4f383e'
-        }
-    }
-})
+  presets: [
+    presetIcons({}),
+    presetWind({}),
+    presetWebFonts({
+      provider: "bunny",
+      fonts: {
+        headline: "Kumbh Sans:400,600",
+      },
+    }),
+  ],
+});

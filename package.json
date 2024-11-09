@@ -1,28 +1,26 @@
 {
   "name": "home",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev --host",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
   },
   "dependencies": {
-    "@astrojs/solid-js": "^4.4.0",
-    "@fontsource/varela-round": "^4.5.9",
-    "@iarna/toml": "^2.2.5",
-    "astro": "^4.12.2",
-    "astrojs-service-worker": "^2.0.0",
-    "smoothscroll-polyfill": "^0.4.4",
-    "solid-js": "^1.8.18"
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^0.15.0",
+    "@solidjs/start": "^1.0.10",
+    "@unocss/reset": "^0.64.0",
+    "solid-js": "^1.9.2",
+    "unocss": "^0.64.0",
+    "vinxi": "^0.4.3"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
-    "@babel/core": ">=7.20.12 <8.0.0",
-    "@types/node": "^18.15.9",
-    "@unocss/reset": "^0.61.5",
-    "unocss": "^0.61.5",
-    "vite-plugin-string": "^1.2.3"
+    "@iconify-json/ph": "^1.2.1",
+    "@unocss/preset-icons": "^0.64.0",
+    "@unocss/preset-web-fonts": "^0.64.0"
   }
 }
