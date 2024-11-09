@@ -260,7 +260,6 @@ const PersonalWebsite = () => {
             <a href="#" class="text-[#2F4F4F] hover:underline">
               Wincer
             </a>
-            . All rights reserved.
           </div>
         </footer>
       </div>
