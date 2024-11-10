@@ -90,6 +90,13 @@ const PersonalWebsite = () => {
   createEffect(() => {
     carouselRef.scrollLeft = currentIndex() * scrollDistance;
   });
+  const scroll = (event: UIEvent) => {
+    const target = event.target as HTMLElement;
+    // console.log(target.scrollLeft, target.scrollWidth);
+    if (target.scrollLeft === target.scrollWidth - target.clientWidth)
+      setCurrentIndex(portfolio.length - 1);
+    if (target.scrollLeft === 0) setCurrentIndex(0);
+  };
 
   return (
     <main class="bg-[#EFEFEF]">
@@ -228,23 +235,28 @@ const PersonalWebsite = () => {
             </Show>
             <div
               ref={(el) => (carouselRef = el)}
+              onscroll={scroll}
               class="overflow-x-auto w-full relative scroll-smooth scroll-container"
             >
               <div class="gap-12 w-fit flex transition-transform duration-500">
-                {portfolio.map((item) => (
-                  <div class="bg-[#E8F5E9] md:p-8 p-6 sm:w-100 w-[calc(100vw-2rem)] h-56 inline-flex flex-col">
-                    <h4 class="text-2xl font-semibold mb-2">{item.title}</h4>
-                    <p class="text-lg text-gray-600 mb-4">{item.description}</p>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      class="inline-flex mt-auto ml-auto bg-[#2F4F4F] items-center gap-1 text-[#EFEFEF] px-3 py-1 hover:underline"
-                    >
-                      <span>Learn more</span>
-                      <i class=" w-6 h-6 block i-ph-arrow-line-up-right" />
-                    </a>
-                  </div>
-                ))}
+                <For each={portfolio}>
+                  {(item) => (
+                    <div class="bg-[#E8F5E9] md:p-8 p-6 sm:w-100 w-[calc(100vw-2rem)] h-56 inline-flex flex-col">
+                      <h4 class="text-2xl font-semibold mb-2">{item.title}</h4>
+                      <p class="text-lg text-gray-600 mb-4">
+                        {item.description}
+                      </p>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        class="inline-flex mt-auto ml-auto bg-[#2F4F4F] items-center gap-1 text-[#EFEFEF] px-3 py-1 hover:underline"
+                      >
+                        <span>Learn more</span>
+                        <i class=" w-6 h-6 block i-ph-arrow-line-up-right" />
+                      </a>
+                    </div>
+                  )}
+                </For>
               </div>
             </div>
           </div>
@@ -255,9 +267,9 @@ const PersonalWebsite = () => {
           <div class="flex items-center justify-center gap-1">
             <i class="i-ph-copyright w-5 h-5 inline-block" />
             2017 - 2024{" "}
-            <i class="i-ph-heart-fill w-5 h-5 text-[#f20c00] inline-block" />{" "}
+            <i class="i-ph-heart-fill mx-1 w-5 h-5 text-[#f20c00] inline-block" />{" "}
             Made by
-            <a href="#" class="text-[#2F4F4F] hover:underline">
+            <a href="/" class="text-[#2F4F4F] hover:underline">
               Wincer
             </a>
           </div>
