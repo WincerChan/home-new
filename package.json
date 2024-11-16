@@ -11,6 +11,7 @@
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "^1.0.10",
     "@unocss/reset": "^0.64.0",
+    "plausible-tracker": "^0.3.9",
     "solid-js": "^1.9.2",
     "unocss": "^0.64.0",
     "vinxi": "^0.4.3"
