@@ -172,9 +172,18 @@ const PersonalWebsite = () => {
 
                 {/* Footprints section */}
                 <section class="">
-                    <h3 class="md:text-[32px] text-6vw mb-4 -ml-0.5 leading-loose">
-                        Footprints
-                    </h3>
+                    <div class="relative">
+                        <a
+                            href="#footprints"
+                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-ph-link-simple absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
+                        />
+                        <h3
+                            id="footprints"
+                            class="md:text-[32px] text-6vw mb-4 -ml-0.5 leading-loose"
+                        >
+                            Footprints
+                        </h3>
+                    </div>
                     <div class="flex gap-4 md:gap-6 flex-wrap">
                         <For each={footprints}>
                             {(item) => (
@@ -195,9 +204,18 @@ const PersonalWebsite = () => {
 
                 {/* Writings section */}
                 <section class="">
-                    <h3 class="md:text-[32px] text-6vw mb-4 -ml-0.5 leading-loose">
-                        Writings
-                    </h3>
+                    <div class="relative">
+                        <a
+                            href="#writings"
+                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-ph-link-simple absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
+                        />
+                        <h3
+                            id="writings"
+                            class="md:text-[32px] text-6vw mb-4 -ml-0.5 leading-loose"
+                        >
+                            Writings
+                        </h3>
+                    </div>
                     <div class="space-y-4">
                         <For each={posts()}>
                             {(post) => (
@@ -227,9 +245,18 @@ const PersonalWebsite = () => {
 
                 {/* Portfolio section */}
                 <section class="">
-                    <h3 class="md:text-[32px] text-6vw mb-4 -ml-0.5 leading-loose">
-                        Portfolio
-                    </h3>
+                    <div class="relative">
+                        <a
+                            href="#portfolio"
+                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-ph-link-simple absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
+                        />
+                        <h3
+                            id="portfolio"
+                            class="md:text-[32px] text-6vw mb-4 -ml-0.5 leading-loose"
+                        >
+                            Portfolio
+                        </h3>
+                    </div>
                     <div class=" relative w-full">
                         <Show when={currentIndex() !== 0}>
                             <button
