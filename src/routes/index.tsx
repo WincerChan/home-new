@@ -49,6 +49,11 @@ const footprints = [
         text: "Moments",
         url: "https://moments.itswincer.com",
     },
+    {
+        icon: "i-ph-microphone-duotone",
+        text: "Podcast",
+        url: "https://podcast.itswincer.com",
+    },
 ];
 
 type Response = {
