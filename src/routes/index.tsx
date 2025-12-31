@@ -9,6 +9,7 @@ import {
 import { isServer } from "solid-js/web";
 import { createAsync, query } from "@solidjs/router";
 import Plausible from "plausible-tracker";
+import Footer from "../components/Footer";
 
 const portfolio = [
     {
@@ -316,17 +317,7 @@ const PersonalWebsite = () => {
                 </section>
 
                 {/* Footer */}
-                <footer class="mt-auto pt-8 text-center text-sm text-gray-500">
-                    <div class="flex items-center justify-center gap-1">
-                        <i class="i-ph-copyright w-5 h-5 inline-block" />
-                        2017 - 2024{" "}
-                        <i class="i-ph-heart-fill mx-1 w-5 h-5 text-[#f20c00] inline-block" />{" "}
-                        Made by
-                        <a href="/" class="text-[#2F4F4F] hover:underline">
-                            Wincer
-                        </a>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         </main>
     );

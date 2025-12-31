@@ -1,8 +1,8 @@
-import { Meta, MetaProvider, Title } from "@solidjs/meta";
+import { Meta, Title } from "@solidjs/meta";
 
 const MetaTags = () => {
   return (
-    <MetaProvider>
+    <>
       <Title>Wincer</Title>
       <Meta
         name="description"
@@ -29,7 +29,7 @@ const MetaTags = () => {
         name="twitter:image"
         content="https://ae02.alicdn.com/kf/Aeadf9a8f9b1246a580924fc003e514c8E.jpg"
       />
-    </MetaProvider>
+    </>
   );
 };
 
