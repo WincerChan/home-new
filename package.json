@@ -8,20 +8,20 @@
   },
   "dependencies": {
     "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.0",
-    "@solidjs/start": "^1.0.10",
-    "@unocss/reset": "^0.64.0",
+    "@solidjs/router": "^0.15.4",
+    "@solidjs/start": "^1.2.1",
+    "@unocss/reset": "^66.5.12",
     "plausible-tracker": "^0.3.9",
-    "solid-js": "^1.9.2",
-    "unocss": "^0.64.0",
-    "vinxi": "^0.4.3"
+    "solid-js": "^1.9.10",
+    "unocss": "^66.5.12",
+    "vinxi": "^0.5.10"
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
-    "@iconify-json/ph": "^1.2.1",
-    "@unocss/preset-icons": "^0.64.0",
-    "@unocss/preset-web-fonts": "^0.64.0"
+    "@iconify-json/ph": "^1.2.2",
+    "@unocss/preset-icons": "^66.5.12",
+    "@unocss/preset-web-fonts": "^66.5.12"
   }
 }
