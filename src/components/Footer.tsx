@@ -4,10 +4,10 @@ export default function Footer() {
     return (
         <footer class="mt-auto pt-8 text-center text-sm text-gray-500">
             <div class="flex flex-col items-center justify-center gap-2">
-                <div class="flex items-center gap-1">
-                    <i class="i-ph-copyright w-5 h-5 inline-block" />
+                <div class="flex flex-wrap items-center justify-center gap-1 px-4">
+                    <i class="i-tabler-copyright w-5 h-5 inline-block" />
                     2017 - {new Date().getFullYear()}{" "}
-                    <i class="i-ph-heart-fill mx-1 w-5 h-5 text-[#f20c00] inline-block" />{" "}
+                    <i class="i-tabler-heart-filled mx-1 w-5 h-5 text-[#f20c00] inline-block" />{" "}
                     Made by Wincer, all rights reversed.
                 </div>
                 <div class="flex gap-4">

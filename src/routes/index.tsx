@@ -36,22 +36,22 @@ const portfolio = [
 
 const footprints = [
     {
-        icon: "i-ph-pencil-duotone",
+        icon: "i-tabler-pencil",
         text: "Blog",
         url: "https://blog.itswincer.com",
     },
     {
-        icon: "i-ph-github-logo",
+        icon: "i-tabler-brand-github",
         text: "GitHub",
         url: "https://github.com/WincerChan",
     },
     {
-        icon: "i-ph-images-square-duotone",
+        icon: "i-tabler-photo",
         text: "Moments",
         url: "https://moments.itswincer.com",
     },
     {
-        icon: "i-ph-microphone-duotone",
+        icon: "i-tabler-microphone",
         text: "Podcast",
         url: "https://podcast.itswincer.com",
     },
@@ -181,7 +181,7 @@ const PersonalWebsite = () => {
                     <div class="relative">
                         <a
                             href="#footprints"
-                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-ph-link-simple absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
+                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-tabler-link absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
                         />
                         <h3
                             id="footprints"
@@ -213,7 +213,7 @@ const PersonalWebsite = () => {
                     <div class="relative">
                         <a
                             href="#writings"
-                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-ph-link-simple absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
+                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-tabler-link absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
                         />
                         <h3
                             id="writings"
@@ -231,7 +231,7 @@ const PersonalWebsite = () => {
                                             {post.date.split(" ")[0]}
                                         </div>
                                         <div class="text-gray-500 flex items-center justify-end text-sm whitespace-nowrap">
-                                            <i class="i-ph-bookmark-duotone w-4 h-4 inline-block" />
+                                            <i class="i-tabler-bookmark w-4 h-4 inline-block" />
                                             <span class="inline-block text-sm">
                                                 {post.category}
                                             </span>
@@ -254,7 +254,7 @@ const PersonalWebsite = () => {
                     <div class="relative">
                         <a
                             href="#portfolio"
-                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-ph-link-simple absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
+                            class="md:inline-block hover:text-[#2F4F4F] w-6 h-6 i-tabler-link absolute md:top-1.3rem top-2.5vw md:-left-2.2rem hidden "
                         />
                         <h3
                             id="portfolio"
@@ -271,7 +271,7 @@ const PersonalWebsite = () => {
                                 }
                                 class="absolute z-10 -left-4  top-[calc(50%-1rem)] w-8 h-8 bg-[#E8F5E9]  border-l-2 border-[#2F4F4F] "
                             >
-                                <i class="text-[#343041] block mx-auto i-ph-arrow-left-bold w-5 h-5" />
+                                <i class="text-[#343041] block mx-auto i-tabler-arrow-left w-5 h-5" />
                             </button>
                         </Show>
 
@@ -282,7 +282,7 @@ const PersonalWebsite = () => {
                                 }
                                 class="absolute z-10 -right-4 top-[calc(50%-1rem)] w-8 h-8 bg-[#E8F5E9] border-r-2  border-[#2F4F4F] "
                             >
-                                <i class="text-[#343041] block mx-auto i-ph-arrow-right-bold w-5 h-5" />
+                                <i class="text-[#343041] block mx-auto i-tabler-arrow-right w-5 h-5" />
                             </button>
                         </Show>
                         <div
@@ -306,7 +306,7 @@ const PersonalWebsite = () => {
                                                 class="inline-flex mt-auto ml-auto bg-[#2F4F4F] items-center gap-1 text-[#EFEFEF] px-3 py-1 hover:underline"
                                             >
                                                 <span>Learn more</span>
-                                                <i class=" w-6 h-6 block i-ph-arrow-line-up-right" />
+                                                <i class=" w-6 h-6 block i-tabler-arrow-up-right" />
                                             </a>
                                         </div>
                                     )}

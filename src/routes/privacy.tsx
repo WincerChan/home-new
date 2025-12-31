@@ -14,21 +14,6 @@ const privacyServices = [
         desc: "Statistics. Uses HMAC (user 16-byte identifier + daily timestamp). Does not track users across days.",
         tag: "No Tracking Cookie",
     },
-    {
-        name: "Comments",
-        desc: "Synced from GitHub. No cookies required.",
-        tag: "No Cookie",
-    },
-    {
-        name: "Search",
-        desc: "Self-hosted server-side indexing. No cookies required.",
-        tag: "No Cookie",
-    },
-    {
-        name: "Douban Show",
-        desc: "Server-side crawler indexing. No cookies required.",
-        tag: "No Cookie",
-    },
 ];
 
 export default function Privacy() {
@@ -38,13 +23,13 @@ export default function Privacy() {
             <div class="max-w-3xl text-[#343041] font-headline sm:pt-18 sm:pb-8 py-8 mx-auto md:space-y-12 space-y-8 md:px-6 px-4 min-h-screen flex flex-col">
                 {/* Header */}
                 <div>
-                     <div class="mb-8">
+                    <div class="mb-8">
                         <A href="/" class="inline-flex items-center gap-2 text-[#2F4F4F] hover:underline">
-                            <i class="i-ph-arrow-left w-5 h-5" />
+                            <i class="i-tabler-arrow-left w-5 h-5" />
                             Back to Home
                         </A>
                     </div>
-                    
+
                     <h1 class="md:text-[64px] text-10vw font-headline font-semibold text-[#2F4F4F] leading-tight mb-4">
                         Privacy
                     </h1>
