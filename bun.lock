@@ -5,6 +5,7 @@
     "": {
       "name": "home",
       "dependencies": {
+        "@iconify-json/tabler": "^1.2.25",
         "@solidjs/meta": "^0.29.4",
         "@solidjs/router": "^0.15.4",
         "@solidjs/start": "^1.2.1",
@@ -15,7 +16,6 @@
         "vinxi": "^0.5.10",
       },
       "devDependencies": {
-        "@iconify-json/tabler": "^1.2.25",
         "@unocss/preset-icons": "^66.5.12",
         "@unocss/preset-web-fonts": "^66.5.12",
       },
