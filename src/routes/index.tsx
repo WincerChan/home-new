@@ -57,21 +57,50 @@ const footprints = [
     },
 ];
 
-type Response = {
-    count: number;
-    data: {
-        date: string;
-        title: string;
-        url: string;
-        category: string;
-    }[];
+type ApiPost = {
+    title?: string;
+    url?: string;
+    category?: string;
+    published_at?: string;
+    updated_at?: string;
 };
 
-const getPosts = query(async () => {
+type ApiResponse = {
+    total: number;
+    hits?: ApiPost[];
+};
+
+type Post = {
+    date: string;
+    title: string;
+    url: string;
+    category: string;
+};
+
+const API_BASE = (
+    import.meta.env.DEV
+        ? "http://localhost:8080"
+        : "https://inkstone.itswincer.com"
+).replace(/\/$/, "");
+
+const getPosts = query(async (): Promise<Post[]> => {
+    const today = new Date().toLocaleDateString("en-CA");
     const response = await fetch(
-        `https://api.itswincer.com/blog-search/v1/?pages=1-5&range=%7E${new Date().toLocaleDateString("en-CA")}`,
+        `${API_BASE}/v2/search?q=range:~${today}&limit=5&sort=latest`,
     );
-    return ((await response.json()) as Response).data;
+    if (!response.ok) return [];
+    const payload = (await response.json()) as ApiResponse;
+    return (payload.hits ?? []).flatMap((post) => {
+        if (!post.title || !post.url) return [];
+        return [
+            {
+                title: post.title,
+                url: post.url,
+                category: post.category ?? "Uncategorized",
+                date: post.published_at ?? post.updated_at ?? "",
+            },
+        ];
+    });
 }, "posts");
 
 export const route = {
@@ -81,6 +110,8 @@ export const route = {
 const PersonalWebsite = () => {
     const posts = createAsync(() => getPosts());
     const [currentIndex, setCurrentIndex] = createSignal(0);
+    const formatPostDate = (date: string) => (date ? date.split("T")[0] : "N/A");
+    const safePosts = () => posts() ?? [];
     let carouselRef: HTMLDivElement;
     let scrollDistance = 0;
     onMount(() => {
@@ -223,12 +254,12 @@ const PersonalWebsite = () => {
                         </h3>
                     </div>
                     <div class="space-y-4">
-                        <For each={posts()}>
+                        <For each={safePosts()}>
                             {(post) => (
                                 <div class="flex md:gap-8 gap-6 items-center">
                                     <div>
                                         <div class="text-gray-500 font-mono text-sm whitespace-nowrap">
-                                            {post.date.split(" ")[0]}
+                                            {formatPostDate(post.date)}
                                         </div>
                                         <div class="text-gray-500 flex items-center justify-end text-sm whitespace-nowrap">
                                             <i class="i-tabler-bookmark w-4 h-4 inline-block" />
