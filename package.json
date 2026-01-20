@@ -12,7 +12,7 @@
     "@solidjs/router": "^0.15.4",
     "@solidjs/start": "^1.2.1",
     "@unocss/reset": "^66.5.12",
-    "plausible-tracker": "^0.3.9",
+    "@wincer/inkstone-track": "^0.1.0",
     "solid-js": "^1.9.10",
     "unocss": "^66.5.12",
     "vinxi": "^0.5.10"

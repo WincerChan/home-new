@@ -10,6 +10,7 @@
         "@solidjs/router": "^0.15.4",
         "@solidjs/start": "^1.2.1",
         "@unocss/reset": "^66.5.12",
+        "@wincer/inkstone-track": "^0.1.0",
         "plausible-tracker": "^0.3.9",
         "solid-js": "^1.9.10",
         "unocss": "^66.5.12",
@@ -367,6 +368,8 @@
     "@vinxi/plugin-directives": ["@vinxi/plugin-directives@0.5.1", "", { "dependencies": { "@babel/parser": "7.28.5", "acorn": "8.15.0", "acorn-jsx": "5.3.2", "acorn-loose": "8.5.2", "acorn-typescript": "1.4.13", "astring": "1.9.0", "magicast": "0.2.11", "recast": "0.23.11", "tslib": "2.8.1" }, "peerDependencies": { "vinxi": "0.5.10" } }, "sha512-pH/KIVBvBt7z7cXrUH/9uaqcdxjegFC7+zvkZkdOyWzs+kQD5KPf3cl8kC+5ayzXHT+OMlhGhyitytqN3cGmHg=="],
 
     "@vinxi/server-components": ["@vinxi/server-components@0.5.1", "", { "dependencies": { "@vinxi/plugin-directives": "0.5.1", "acorn": "8.15.0", "acorn-loose": "8.5.2", "acorn-typescript": "1.4.13", "astring": "1.9.0", "magicast": "0.2.11", "recast": "0.23.11" }, "peerDependencies": { "vinxi": "0.5.10" } }, "sha512-0BsG95qac3dkhfdRZxqzqYWJE4NvPL7ILlV43B6K6ho1etXWB2e5b0IxsUAUbyqpqiXM7mSRivojuXjb2G4OsQ=="],
+
+    "@wincer/inkstone-track": ["@wincer/inkstone-track@0.1.0", "", {}, "sha512-yFsEeQOio1FU1HvEr7wI8QIT4ChM4cP7MzIhhqi/C+l7TqpQrzkEjK0YjME6/BC0abg6L+T+Bxv2HdI76AimzQ=="],
 
     "abbrev": ["abbrev@3.0.1", "", {}, "sha512-AO2ac6pjRB3SJmGJo+v5/aK6Omggp6fsLrs6wN9bd35ulu4cCwaAU9+7ZhXjeqHVkaHThLuzH0nZr0YpCDhygg=="],
 
