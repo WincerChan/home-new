@@ -8,8 +8,8 @@ import {
 } from "solid-js";
 import { isServer } from "solid-js/web";
 import { createAsync, query } from "@solidjs/router";
-import Plausible from "plausible-tracker";
 import Footer from "../components/Footer";
+import { INKSTONE_BASE_URL } from "../lib/inkstone-base";
 
 const portfolio = [
     {
@@ -77,16 +77,10 @@ type Post = {
     category: string;
 };
 
-const API_BASE = (
-    import.meta.env.DEV
-        ? "http://localhost:8080"
-        : "https://inkstone.itswincer.com"
-).replace(/\/$/, "");
-
 const getPosts = query(async (): Promise<Post[]> => {
     const today = new Date().toLocaleDateString("en-CA");
     const response = await fetch(
-        `${API_BASE}/v2/search?q=range:~${today}&limit=5&sort=latest`,
+        `${INKSTONE_BASE_URL}/v2/search?q=range:~${today}&limit=5&sort=latest`,
     );
     if (!response.ok) return [];
     const payload = (await response.json()) as ApiResponse;
@@ -116,13 +110,6 @@ const PersonalWebsite = () => {
     let scrollDistance = 0;
     onMount(() => {
         if (isServer) return;
-        const { enableAutoPageviews } = Plausible({
-            domain: "itswincer.com",
-            hashMode: true,
-            apiHost: "https://track.itswincer.com",
-            trackLocalhost: true,
-        });
-        enableAutoPageviews();
         const setScrollDistance = () => {
             setCurrentIndex(0);
             if (window.innerWidth < 640)
