@@ -11,8 +11,9 @@ const InkstoneTrackerClient = () => {
     onMount(() => {
         const instance = createTracker({
             baseUrl: INKSTONE_BASE_URL,
-            siteHost: "https://itswincer.com",
+            siteHost: "itswincer.com",
             isDev: import.meta.env.DEV,
+            debug: true,
         });
         instance.bindVisibility();
         setTracker(instance);

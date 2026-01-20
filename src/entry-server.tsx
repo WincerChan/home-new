@@ -6,13 +6,16 @@ import { buildTokenMap, createInkstoneToken, normalizePath } from "./lib/inkston
 export default createHandler(() => (
   <StartServer
     document={({ assets, children, scripts }) => {
-      const secret = process.env.INKSTONE_PUBLIC_TOKEN_SECRET ?? "";
+      const secret = process.env.INKSTONE_PUBLIC_TOKEN_SECRET;
+      if (!secret) {
+        throw new Error("INKSTONE_PUBLIC_TOKEN_SECRET is required to render inkstone meta.");
+      }
       const requestEvent = getRequestEvent();
       const requestUrl = requestEvent
         ? new URL(requestEvent.request.url)
         : null;
       const path = normalizePath(requestUrl?.pathname ?? "/");
-      const token = secret ? createInkstoneToken(path, secret) : "";
+      const token = createInkstoneToken(path, secret);
       const tokenMap = buildTokenMap(secret);
 
       return (
